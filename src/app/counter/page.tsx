@@ -2,7 +2,6 @@
 
 import Counter from "@/components/Counter";
 import { NextPage } from "next";
-import Link from "next/link";
 
 const CounterPage: NextPage = () => {
   return (
