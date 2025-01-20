@@ -18,6 +18,12 @@ const Home: React.FC = () => {
       <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
         <Link href="/fetchData">Fetch</Link>
       </button>
+
+
+      {/* parmas and searchParams */}
+      <Link href='articles/breaking-news-123?lang=en'>Read in English</Link>
+      <Link href='articles/breaking-news-123?lang=hi'>Read in hindi</Link>
+
     </div>
   );
 };

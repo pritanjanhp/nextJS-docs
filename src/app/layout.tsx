@@ -1,6 +1,11 @@
 import Link from "next/link";
 import "../styles/globals.css";
 
+export const metadata = {
+  title:"Next.js",
+  description: "Learning about Next.js",
+}
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -8,7 +13,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <title>Next JS - Counter & Fetch API</title>
       <body>
         <nav className="bg-black text-white text-bold px-5 py-5 flex justify-between items-center">
           <h2 className="text-xl">Logo</h2>

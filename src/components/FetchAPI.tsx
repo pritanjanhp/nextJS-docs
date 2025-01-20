@@ -1,5 +1,6 @@
 "use client";
 
+import { redirect } from "next/dist/server/api-utils";
 import React, { useEffect, useState } from "react";
 
 interface Data {
@@ -14,6 +15,17 @@ const FetchAPI: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      // const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+      // const res = await resp.json();
+      // setData(res.slice(0, 5));
+
+      // if (!res.ok) {
+      //   return { message: "please enter correct URL" };
+      // }
+
+      // redirect("/");
+      // setLoading(false);
+
       try {
         const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
         const res = await resp.json();
