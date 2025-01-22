@@ -17,14 +17,14 @@ export default function ErrorBoundary({
       reset();
     });
   };
-  
+
   return (
     <div>
       {/* <h1>Error in review</h1> */}
       <h1>
         {error.message}
       </h1>
-      <button onClick={reset}>Try again</button>
+      <button onClick={() => reset()}>Try again</button>
     </div>
   );
 }

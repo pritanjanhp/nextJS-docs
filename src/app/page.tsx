@@ -19,11 +19,29 @@ const Home: React.FC = () => {
         <Link href="/fetchData">Fetch</Link>
       </button>
 
-      <Link href='articles/breaking-news-123?lang=en'>Read in English</Link>
-      <Link href='articles/breaking-news-123?lang=hi'>Read in hindi</Link>
+      <button>
+        {/* <Link></Link> */}
+      </button>
 
+      <p>ignore below ones</p>
+      <Link href="articles/breaking-news-123?lang=en">Read in English</Link>
+      <Link href="articles/breaking-news-123?lang=hi">Read in hindi</Link>
     </div>
   );
 };
 
 export default Home;
+
+// import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+// // import { GoogleAuthProvider } from "firebase/auth/web-extension";
+
+// const auth = getAuth();
+// const button = document.querySelector("button");
+// onAuthStateChanged(auth, user => {
+//   if (user === null) {return <h1>Not logged in</h1>}
+//   console.log(user);
+// });
+
+// button?.addEventListener("click", (clickEvent) => {
+//   signInWithRedirect(auth, new GoogleAuthProvider());
+// })

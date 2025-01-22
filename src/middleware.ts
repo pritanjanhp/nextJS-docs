@@ -33,7 +33,7 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   // if (request.nextUrl.pathname.startsWith("/docs")) {
   //   return NextResponse.rewrite(new URL("/time", request.url)); // will change the URL
-  //   // return NextResponse.redirect(new URL("/time", request.url));  // wiill not the URL
+  //   // return NextResponse.redirect(new URL("/time", request.url));  // wiill not change the URL
   // }
 
   // if (request.nextUrl.pathname.startsWith("/dashboard")) {
