@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import { auth } from "@/firebase";
 // import { useRouter } from "next/router";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -14,13 +14,25 @@ const Signin1 = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      // router.push("/tasks");
-      <Link href="/">click here</Link>;
-    } catch (err) {
-      setError(err.message);
-    }
+
+    // let email = e.currentTarget.email.value;
+    // let password = e.currentTarget.password.value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    // try {
+    //   await signInWithEmailAndPassword(auth, email, password);
+    //   // router.push("/tasks");
+    //   <Link href="/">click here</Link>;
+    // } catch (err) {
+    //   setError(err.message);
+    // }
   };
 
   return (
@@ -51,6 +63,7 @@ const Signin1 = () => {
           click here
           {/* <Link href="/fetchData">Fetch</Link> */}
         </button>
+
       </form>
       {error && <p className="text-red-500">{error}</p>}
     </div>
