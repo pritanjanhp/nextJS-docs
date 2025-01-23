@@ -53,17 +53,15 @@ const Signin1 = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign In</button>
 
         <button
           className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
           type="submit"
           onSubmit={handleSubmit}
         >
-          click here
+          sign in
           {/* <Link href="/fetchData">Fetch</Link> */}
         </button>
-
       </form>
       {error && <p className="text-red-500">{error}</p>}
     </div>
